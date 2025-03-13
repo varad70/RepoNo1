@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.wrapper {
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.666);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: black;
+    font-size: 2rem;
+}
+
+section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 150px;
+    /* background-color: gray; */
+    border-radius: 10px;
+    padding: 20px;
+    border: 2px solid gray;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    /* background-color: aquamarine; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    cursor: pointer;
+}
+
+i {
+    font-size: 3.2rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+:root {
+    --facebook: blue;
+    --twitter: #1877f2;
+    --instagram: #d6249f;
+    --youtube: #ff0000;
+}
+
+/* .box:hover i {
+    transform: scale(1.2);
+    color: #000;
+} */
+
+/* 1 - SHADOW */
+.shadow {
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.55);
+}
+.shadow:hover {
+    color: black;
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.732);
+}
+
+/* 2 - COLOR SHADOW */
+.color-shadow {
+    border-radius: 50%;
+    color: rgba(0, 0, 0, 0.55);
+}
+.color-shadow:nth-child(1):hover {
+    color: var(--facebook);
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+    box-shadow: 0 8px 8px 5px var(--facebook);
+}
+.color-shadow:nth-child(2):hover {
+    color: var(--twitter);
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+    box-shadow: 0 8px 8px 5px var(--twitter);
+}
+.color-shadow:nth-child(3):hover {
+    color: var(--instagram);
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+    box-shadow: 0 8px 8px 5px var(--instagram);
+}
+.color-shadow:nth-child(4):hover {
+    color: var(--youtube);
+    transform: scale(1.05);
+    transition: 0.4s ease-in;
+    box-shadow: 0 8px 8px 5px var(--youtube);
+}
+
+/* 3 - FLOAT */
+.float i{
+    color: rgba(0, 0, 0, 0.55);
+}
+.float:hover {
+    border-radius: 50%;
+    box-shadow: 0 20px 5px -5px rgba(0, 0, 0, 0.65);
+    animation: float-anime 2s infinite;
+}
+@keyframes float-anime {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+.float:hover .fa-facebook {
+    color: var(--facebook);
+}
+.float:hover .fa-twitter {
+    color: var(--twitter);
+}
+.float:hover .fa-instagram {
+    color: var(--instagram);
+}
+.float:hover .fa-youtube {
+    color: var(--youtube);
+}
+
+/* 4 - BUTTON */
+.button {
+    color: white;
+}
+.button:hover {
+    background-color: black;
+    border-radius: 20%;
+}
+.button:nth-child(1):hover {
+    transition: 0.3s ease-in;
+    border-bottom: 8px solid var(--facebook);
+}
+.button:nth-child(2):hover {
+    transition: 0.3s ease-in;
+    border-bottom: 8px solid var(--twitter);
+}
+.button:nth-child(3):hover {
+    transition: 0.3s ease-in;
+    border-bottom: 8px solid var(--instagram);
+}
+.button:nth-child(4):hover {
+    transition: 0.3s ease-in;
+    border-bottom: 8px solid var(--youtube);
+}
+
+
+/* 5 - ZOOM-IN */
+.zoom-in {
+    color: white;
+}
+.zoom-in:hover i{
+    transform: scale(1.25);
+}
+.zoom-in:hover .fa-facebook{
+    background: var(--facebook);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.zoom-in:hover .fa-twitter{
+    background: var(--twitter);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.zoom-in:hover .fa-instagram{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), var(--instagram));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.zoom-in:hover .fa-youtube{
+    background: var(--youtube);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 6 - SHAKE */
+.shake {
+    border-radius: 50%;
+    background-color: white;
+}
+.shake i {
+    color: gray;
+}
+.shake:hover .fa-facebook {
+    animation: shaking 0.9s ease-in;
+    color: var(--facebook);
+}
+.shake:hover .fa-twitter {
+    animation: shaking 0.9s ease-in;
+    color: var(--twitter);
+}
+.shake:hover .fa-instagram {
+    animation: shaking 0.9s ease-in;
+    color: var(--instagram);
+}
+.shake:hover .fa-youtube {
+    animation: shaking 0.9s ease-in;
+    color: var(--youtube);
+}
+@keyframes shaking {
+    0% {
+        color: gray;
+    }
+    25% {
+        color: gray;
+        transform: rotate(30deg);
+    }
+    50% {
+        color: gray;
+        transform: rotate(-30deg);
+    }
+    75% {
+        color: gray;
+        transform: rotate(0deg);
+
+    }
+}
+
+/* 7 - CIRCLE */
+.circle {
+    background-color: white;
+    color: grey;
+    border-radius: 20%;
+}
+.circle:hover {
+    border-radius: 50%;
+    transition: 0.55s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.circle:hover .fa-facebook{
+    background: var(--facebook);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.circle:hover .fa-twitter{
+    background: var(--twitter);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.circle:hover .fa-instagram{
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), var(--instagram));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.circle:hover .fa-youtube{
+    background: var(--youtube);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 8 - FLIP-UP */
+.flip-up {
+    color: white;
+    border-radius: 20%;
+    border: 4px solid white;
+}
+.flip-up:hover:nth-child(1) {
+    animation: flip1 30s ease-in;
+    animation-timing-function: linear;
+}
+@keyframes flip1 {
+    2% {
+        transform: rotateX(80deg);
+        background-color: transparent;
+        border: 4px solid white;
+    }
+    4% {
+        transform: none;
+        background-color: var(--facebook);
+        border: 4px solid var(--facebook);
+    }
+}
+.flip-up:hover:nth-child(2) {
+    animation: flip2 30s ease-in;
+    animation-timing-function: linear;
+}
+@keyframes flip2 {
+    2% {
+        transform: rotateX(80deg);
+        background-color: transparent;
+        border: 4px solid white;
+    }
+    4% {
+        transform: none;
+        background-color: var(--twitter);
+        border: 4px solid var(--twitter);
+    }
+}
+.flip-up:hover:nth-child(3) {
+    animation: flip3 30s ease-in;
+    animation-timing-function: linear;
+}
+@keyframes flip3 {
+    2% {
+        transform: rotateX(80deg);
+        background-color: transparent;
+        border: 4px solid white;
+    }
+    4% {
+        transform: none;
+        background-color: var(--instagram);
+        border: 4px solid var(--instagram);
+    }
+}
+.flip-up:hover:nth-child(4) {
+    animation: flip4 30s ease-in;
+    animation-timing-function: linear;
+}
+@keyframes flip4 {
+    2% {
+        transform: rotateX(80deg);
+        background-color: transparent;
+        border: 4px solid white;
+    }
+    4% {
+        transform: none;
+        background-color: var(--youtube);
+        border: 4px solid var(--youtube);
+    }
+}
+
+/* 9 - BACKGROUND */
+.background {
+    color: gray;
+    background-color: white;
+    border-radius: 25%;
+    opacity: 0.4;
+}
+.background:hover {
+    transform: scale(1.1);
+    transition: 1s ease-out;
+}
+.background:hover:nth-child(1) {
+    color: white;
+    background: var(--facebook);
+    opacity: 1;
+}
+.background:hover:nth-child(2) {
+    color: white;
+    background: var(--twitter);
+    opacity: 1;
+}
+.background:hover:nth-child(3) {
+    color: white;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.9), var(--instagram));
+    opacity: 1;
+}
+.background:hover:nth-child(4) {
+    color: white;
+    background: var(--youtube);
+    opacity: 1;
+}
+
+/* 10 - GRADIENT */
+.gradient {
+    background-color: #FFD700;
+    color: black;
+    border-radius: 50%;
+}
+.gradient:hover {
+    background: linear-gradient(45deg, #FFD700 0%, #CD7F32 50%, #6A4E23 100%);
+}
+.gradient:hover i {
+    transform: scale(1.1);
+    transition: 0.5s ease-in;
+}
+
+
+
